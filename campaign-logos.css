@@ -1,0 +1,61 @@
+.campaign-logos {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  min-width: 0;
+}
+
+.campaign-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid #e2e8eb;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.campaign-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.campaign-logo-amor { width: 105px; }
+.campaign-logo-ayuda { width: 88px; }
+.campaign-divider { width: 1px; height: 38px; background: #d6dfe4; }
+
+@media (max-width: 1180px) {
+  .site-header { gap: 1rem; }
+  .campaign-logo-amor { width: 88px; }
+  .campaign-logo-ayuda { width: 72px; }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: auto;
+    min-height: 78px;
+    padding: .45rem 1rem;
+  }
+
+  .campaign-logos { justify-self: center; gap: .35rem; }
+  .campaign-logo { height: 48px; }
+  .campaign-logo-amor { width: 72px; }
+  .campaign-logo-ayuda { width: 58px; }
+  .campaign-divider { height: 30px; }
+  .language-switcher { margin-left: 0; justify-self: end; }
+  .header-donate { display: none; }
+}
+
+@media (max-width: 480px) {
+  .site-header { grid-template-columns: auto 1fr; }
+  .campaign-logos { grid-column: 1 / -1; grid-row: 2; justify-self: stretch; justify-content: center; padding-top: .35rem; border-top: 1px solid #e7edef; }
+  .language-switcher { grid-column: 2; grid-row: 1; }
+  .campaign-logo { height: 50px; }
+  .campaign-logo-amor { width: 86px; }
+  .campaign-logo-ayuda { width: 70px; }
+}
